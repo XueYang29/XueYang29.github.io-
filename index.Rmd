@@ -1,0 +1,24 @@
+---
+title: "Xue Yang"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+### I have a webpage!
+
+This is Xue Yang's personal website!
+
+In this website, there are some *informations* about me!
+
+
+### Picture of my dog!
+
+You may also like my dog.
+
+<img src = "images/dog.jpg" style = "width:75%">
+
+
+
+
