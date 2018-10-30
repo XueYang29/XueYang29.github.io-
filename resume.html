@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -169,6 +172,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -208,10 +306,10 @@ $(document).ready(function () {
   <a href="http://www.google.com">Google</a>
 </li>
 <li>
-  <a href="about.html">About</a>
+  <a href="resume.html">Resume</a>
 </li>
 <li>
-  <a href="mailto:&lt;you@youremail.com&gt;">
+  <a href="mailto:xy2397@columbia.edu">
     <span class="fa fa-envelope fa-lg"></span>
      
   </a>
@@ -236,14 +334,58 @@ $(document).ready(function () {
 </div>
 
 
-<div id="about-this-site" class="section level3">
-<h3>About this site</h3>
-<p>Sometimes you need to say a bit about the site – how it was made, where it’s hosted, where the source code can be found.</p>
-<p>If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.</p>
+<div id="education" class="section level3">
+<h3>Education</h3>
+<p><em>Mailman School of Public Health, Columbia University Medical Center</em></p>
+<p><em>New York, US</em></p>
+<p><em>Master in biostatistics</em></p>
+<p><em>Graduate Date (expected): May. 2020</em></p>
+<p><em>Intensive Course</em>: Date Science, Probability, Biostatistical Method, Principles of Eqidemiology</p>
+<hr />
+<p><em>School of Mathematical Sciences, Xiamen University</em></p>
+<p><em>Xiamen, China</em></p>
+<p><em>B.S. in Statistics</em></p>
+<p><em>Graduate Date: June. 2018</em></p>
+<p><em>GPA：88.05/100, Major GPA: 88.97/100</em></p>
+<p><em>Intensive Course</em>: Mathematical Logic, Introduction to Statistics, Economics, Actuarial Mathematics, Statistics, Partial Differential Equation, Bayesian Statistics, Graph Theory, Real Analysis, Statistical Computing, Applied Linear Models, Time Series Analysis, Multivariate Statistical Analysis, Operations Research and Optimization, etc.</p>
+<hr />
+<p><em>The Wang Yanan Institute for Studies in Economics, Xiamen University</em></p>
+<p><em>Xiamen, China</em></p>
+<p><em>B.S. in Mathematical Finance (Minor)</em></p>
+<p><em>Sept. 2016-June. 2017</em></p>
+<p><em>Intensive Course</em>: Principles of Economics, Econometrics, Financial Economics, Microeconomics, etc.</p>
+</div>
+<div id="publication" class="section level3">
+<h3>Publication</h3>
+<p>Xia H, Zhu L, <em>Yang X</em>, et al. Clinical Observation on Treatment of Children Amblyopia by Peibuganshen Huoxuetongluo Method [J]. China Journal of Chinese Ophthalmology, 2017 (2): 99-102.</p>
+<hr />
+<p>Xia H,<em>Yang X</em>. Clinical Observation on Treatment of Visual Display Terminal Asthenopia by Zibuganshen Jiejitongluo Method [J]. Pharmacology and Clinics of Chinese Materia Medica, 2018 (3): 186-188.</p>
+</div>
+<div id="honors-and-awards" class="section level3">
+<h3>Honors and Awards</h3>
+<p>Excellent Cultural and Sports Scholarship, Xiamen University: Nov. 2017</p>
+<p>First Prize of Excellence Scholarship, Xiamen University: Nov. 2017</p>
+<p>Merit Student, School of Mathematical Sciences, Xiamen University: Nov. 2017</p>
+<p>Qide Scholarship, School of Mathematical Sciences, Xiamen University: May. 2017</p>
+<p>Merit Student, School of Mathematical Sciences, Xiamen University: Nov. 2016</p>
+<p>Second Prize of Excellence Scholarship, Xiamen University: Nov. 2016</p>
+<p>Excellent Cultural and Sports Scholarship, Xiamen University: Nov. 2016</p>
+<p>First Prize of China Undergraduate Mathematical Contest in Modeling (CUMCM) in Fujian Province: Sept. 2016</p>
+<p>Excellent Cultural and Sports Scholarship, Xiamen University: Nov. 2015</p>
+</div>
+<div id="skills-and-hobbies" class="section level3">
+<h3>Skills and Hobbies</h3>
+<p><em>Software</em>:</p>
+<p>MATLAB，R，SPSS，LINGO，Latex，MacDown</p>
+<p><em>Specialty</em>：</p>
+<p>Cello (10 level, member of symphony orchestra in Xiamen University, Chief Celist)</p>
+<p>Swimming (National Level two Athlete，member of sports team in Xiamen University, won several gold medals in city sports competition.)</p>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 

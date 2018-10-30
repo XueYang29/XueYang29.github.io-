@@ -1,9 +1,90 @@
 ---
 title: "Resume"
+output:
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
-### About this site
+### Education
 
-Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
+*Mailman School of Public Health, Columbia University Medical Center*
 
-If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
+*New York, US*
+
+*Master in biostatistics*
+
+*Graduate Date (expected): May. 2020*
+
+*Intensive Course*: Date Science, Probability, Biostatistical Method, Principles of Eqidemiology
+
+------------------------------------------------------------
+
+*School of Mathematical Sciences, Xiamen University*
+
+*Xiamen, China*
+
+*B.S. in Statistics*
+
+*Graduate Date: June. 2018*
+
+*GPA：88.05/100, Major GPA: 88.97/100*
+
+*Intensive Course*: Mathematical Logic, Introduction to Statistics, Economics, Actuarial Mathematics, Statistics, Partial Differential Equation, Bayesian Statistics, Graph Theory, Real Analysis, Statistical Computing, Applied Linear Models, Time Series Analysis, Multivariate Statistical Analysis, Operations Research and Optimization, etc.
+
+------------------------------------------------------------
+
+
+*The Wang Yanan Institute for Studies in Economics, Xiamen University*
+
+*Xiamen, China*
+
+*B.S. in Mathematical Finance (Minor)*
+
+*Sept. 2016-June. 2017*
+
+*Intensive Course*: Principles of Economics, Econometrics, Financial Economics, Microeconomics, etc.
+
+
+### Publication
+
+Xia H, Zhu L, *Yang X*, et al. Clinical Observation on Treatment of Children Amblyopia by Peibuganshen Huoxuetongluo Method [J]. China Journal of Chinese Ophthalmology, 2017 (2): 99-102.
+
+------------------------------------------------------------
+
+Xia H,*Yang X*. Clinical Observation on Treatment of Visual Display Terminal Asthenopia by Zibuganshen Jiejitongluo Method [J]. Pharmacology and Clinics of Chinese Materia Medica, 2018 (3): 186-188.
+
+
+### Honors and Awards 
+
+Excellent Cultural and Sports Scholarship, Xiamen University: Nov. 2017                                       
+
+First Prize of Excellence Scholarship, Xiamen University: Nov. 2017                                            
+
+Merit Student, School of Mathematical Sciences, Xiamen University: Nov. 2017                                 
+
+Qide Scholarship, School of Mathematical Sciences, Xiamen University: May. 2017                                
+
+Merit Student, School of Mathematical Sciences, Xiamen University: Nov. 2016                                   
+
+Second Prize of Excellence Scholarship, Xiamen University:  Nov. 2016                                        
+
+Excellent Cultural and Sports Scholarship, Xiamen University: Nov. 2016                                         
+
+First Prize of China Undergraduate Mathematical Contest in Modeling (CUMCM) in Fujian Province: Sept. 2016
+
+Excellent Cultural and Sports Scholarship, Xiamen University: Nov. 2015  
+
+### Skills and Hobbies                                                        
+
+*Software*: 
+
+MATLAB，R，SPSS，LINGO，Latex，MacDown
+
+*Specialty*：
+
+Cello (10 level, member of symphony orchestra in Xiamen University, Chief Celist) 
+
+Swimming (National Level two Athlete，member of sports team in Xiamen University, won several gold medals in city sports competition.) 
+
+
