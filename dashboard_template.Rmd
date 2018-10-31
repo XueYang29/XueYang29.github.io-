@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "NY NOAA Dashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -11,74 +11,62 @@ output:
 library(flexdashboard)
 library(tidyverse)
 library(viridis)
-library(p8105.datasets)
-
 library(plotly)
 ```
-
-
 
 ```{r}
 set.seed(1)
 
-data(nyc_airbnb)
-nyc_airbnb = 
-  nyc_airbnb %>% 
-  mutate(rating = review_scores_location / 2) %>%
-  select(boro = neighbourhood_group, neighbourhood, rating, price, room_type,
-         latitude, longitude) %>%
-  filter(!is.na(rating), 
-         boro == "Manhattan",
-         room_type == "Entire home/apt",
-         price %in% 100:500)  %>% 
+ny_noaa = 
+  # load the data through relative path
+  read_csv(file = "./data/nynoaadat.csv") %>% 
+  # create separate variables for year, month, and day.
+  separate(date, into = c("year", "month", "day"), sep = "-") %>% 
+  # make the observations for temperature and precipitation in reasonable units
+  mutate(tmax = as.numeric(tmax),
+         tmin = as.numeric(tmin)) %>% 
+  mutate(prcp = prcp/10,
+         tmax = tmax/10,
+         tmin = tmin/10) %>% 
+  # filter to be no NAs
+  filter(!is.na(tmax),
+         !is.na(tmin)) %>% 
+  # limit the sample size to be 5000
   sample_n(5000) 
 ```
 
-Column {data-width=650}
+
+Column {data-width=500}
 -----------------------------------------------------------------------
 
-### Chart A
+### The average maximum temperature from year 2005 to 2010 in each month
 
 ```{r}
-nyc_airbnb %>%
-  # /n means a new line
-  mutate(text_label = str_c("Price: $", price, '\nRating: ', rating)) %>% 
-  plot_ly(x = ~longitude, y = ~latitude, type = "scatter", mode = "markers",
-          alpha = 0.5, 
-          color = ~price,
-          # mapping the varable "text_lable" in the text
-          text = ~text_label)
+ny_noaa %>%
+  # filter the dataset for only January and July
+  filter(year %in% 2005:2010) %>% 
+  group_by(year, month) %>% 
+  summarize(average_tmax = mean(tmax, na.rm = TRUE)) %>% 
+  plot_ly(x = ~month, y = ~average_tmax, color = ~year, type = "bar")
 ```
 
-Column {data-width=350}
+Column {data-width=500}
 -----------------------------------------------------------------------
 
-### Chart B
+### The distribution of snowfall values greater than 0 and less than 100 separately by year
 
 ```{r}
-common_neighborhoods =
-  nyc_airbnb %>% 
-  # order the count
-  count(neighbourhood, sort = TRUE) %>% 
-  top_n(8) %>% 
-  # Selecting by n
-  select(neighbourhood)
-
-
-inner_join(nyc_airbnb, common_neighborhoods,
-             by = "neighbourhood") %>% 
-  # order according to median of price
-  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>% 
-  plot_ly(y = ~price, color = ~neighbourhood, type = "box",
-          colors = "Set2")
+ny_noaa %>% 
+  # filter the snowfall value from greater than 0 and less than 100
+  filter(snow %in% 1:99) %>% 
+  plot_ly(y = ~snow, color = ~year, type = "box")
 ```
 
-### Chart C
+### The maximum and minimum temperature in each year
 
 ```{r}
-nyc_airbnb %>% 
-  count(neighbourhood) %>% 
-  mutate(neighbourhood = fct_reorder(neighbourhood, n)) %>% 
-  plot_ly(x = ~neighbourhood, y = ~n, color = ~neighbourhood, type = "bar")
+ny_noaa %>% 
+  sample_n(500) %>% 
+  plot_ly(x = ~tmax, y = ~tmin, color = ~year, type = "scatter", mode = "markers")
 ```
 

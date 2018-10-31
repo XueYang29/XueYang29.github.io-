@@ -12,12 +12,16 @@ This is Xue Yang's personal website!
 
 In this website, there are some *informations* about me!
 
+### Resume
 
-### Picture of my dog!
+My resume page is [here](resume.html).
 
-You may also like my dog.
 
-<img src = "images/dog.jpg" style = "width:75%">
+### Flexdashboard
+
+You may also like to see some [plot](dashboard_template.html) using the dataset "NY NOAA".
+
+
 
 
 
