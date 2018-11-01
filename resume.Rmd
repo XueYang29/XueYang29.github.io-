@@ -6,7 +6,11 @@ output:
     toc_float: true
 ---
 
+------------------------------------------------------------
+
 ### Education
+
+------------------------------------------------------------
 
 *Mailman School of Public Health, Columbia University Medical Center*
 
@@ -45,8 +49,11 @@ output:
 
 *Intensive Course*: Principles of Economics, Econometrics, Financial Economics, Microeconomics, etc.
 
+------------------------------------------------------------
 
 ### Publication
+
+------------------------------------------------------------
 
 Xia H, Zhu L, *Yang X*, et al. Clinical Observation on Treatment of Children Amblyopia by Peibuganshen Huoxuetongluo Method [J]. China Journal of Chinese Ophthalmology, 2017 (2): 99-102.
 
@@ -54,8 +61,64 @@ Xia H, Zhu L, *Yang X*, et al. Clinical Observation on Treatment of Children Amb
 
 Xia H,*Yang X*. Clinical Observation on Treatment of Visual Display Terminal Asthenopia by Zibuganshen Jiejitongluo Method [J]. Pharmacology and Clinics of Chinese Materia Medica, 2018 (3): 186-188.
 
+------------------------------------------------------------
+
+### Project Experience   
+
+------------------------------------------------------------
+
+*Vehicle Delay Forecasting: Data from Canada-US Border Stations*
+
+*Sept. 2016-Mar. 2017*
+
+*UBC Sauder Project*
+
+* Selected data of queue length in meters, queue length in vehicles, service rate in vehicles, volume in vehicles of Canada-US border stations from 1st January, 2016 to 31st December, 2016, and further established the model;
+
+* Established proper stochastic process model, time series model and regression model upon modification of the existing model; 
+
+* Fitted the time period data and determined the parameter in the model; Optimized the model after diagnosing the model and analyzing the error;
+
+* Completed the forecast of the future data. 
+
+------------------------------------------------------------
+
+*Physical Model of the Mooring System Design*
+
+*Sept. 2016*
+
+*China Undergraduate Mathematical Contest in Modeling (CUMCM)*
+
+* Proved the smoothness of the anchor chain by applying extreme value theory; obtained the catenary equations of the anchor chain through principle of minimum potential energy and functional variational method, and further made a simple mathematical model of catenary; 
+
+* Solved a multi-objective optimization problem based on the Bayesian method;
+
+* Improved the model by analyzing the force balance and moment balance;
+
+* Completed the static equilibrium analysis of the rigid body through insulating each rigid body under isolation method. 
+
+------------------------------------------------------------
+
+*Clinical Observation of the Amblyopic Children*
+
+*Oct. 2014- Apr. 2017*
+
+* Adopted the randomized study method and followed random principle, check against principle and blinded principle;
+
+* Divided the subjects into treatment group and control group randomly through random number table;
+
+* Measured the clinical effects of two groups through three indexes: clinical effects, eyesight before and after therapy, as well as the onset time of eyesight improved after therapy;
+
+* Compared the clinical effects of two groups through comparing the location parameter of the sample data after application of hypothesis testing;
+
+* Compared the test result through analyzing the Mann-Whitney U Test and total effective rate. 
+
+------------------------------------------------------------
+
 
 ### Honors and Awards 
+
+------------------------------------------------------------
 
 Excellent Cultural and Sports Scholarship, Xiamen University: Nov. 2017                                       
 
@@ -75,7 +138,11 @@ First Prize of China Undergraduate Mathematical Contest in Modeling (CUMCM) in F
 
 Excellent Cultural and Sports Scholarship, Xiamen University: Nov. 2015  
 
-### Skills and Hobbies                                                        
+------------------------------------------------------------
+
+### Skills and Hobbies     
+
+------------------------------------------------------------
 
 *Software*: 
 

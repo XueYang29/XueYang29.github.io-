@@ -12,14 +12,14 @@ library(flexdashboard)
 library(tidyverse)
 library(viridis)
 library(plotly)
+library(p8105.datasets)
 ```
 
 ```{r}
-set.seed(1)
+data("ny_noaa")
 
 ny_noaa = 
-  # load the data through relative path
-  read_csv(file = "./data/nynoaadat.csv") %>% 
+  ny_noaa %>% 
   # create separate variables for year, month, and day.
   separate(date, into = c("year", "month", "day"), sep = "-") %>% 
   # make the observations for temperature and precipitation in reasonable units

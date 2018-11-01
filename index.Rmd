@@ -21,6 +21,10 @@ My resume page is [here](resume.html).
 
 You may also like to see some [plot](dashboard_template.html) using the dataset "NY NOAA".
 
+### Picture
+
+There is also some pictures [here](picture.html).
+
 
 
 

@@ -1,0 +1,10 @@
+---
+title: "Picture"
+---
+
+### Picture of my dog
+
+Daidai is great:
+
+<img src = "images/dog.jpg" style = "width:75%">
+                                                                                                                                                                                                                                                                          
